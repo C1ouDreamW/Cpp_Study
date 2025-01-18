@@ -1,60 +1,59 @@
-#include<bits/stdc++.h>
+#include<iostream>
+
 using namespace std;
-const int N = 1010;
-vector<vector<int>> a(N);
 
-bool cmp(int& A, int& B) {
-	for (int i = 0; i < a[A - 1].size(); i++) {
-		if (a[A - 1][0] == 0 && a[A - 1].size() == 1) {
-			return A > B;
-		}
-		if (a[A - 1][i] == B) {
-			return A < B;
-		}
-	}
-	return A >= B;
+typedef long long ll;
+char a[1010][1010];
+
+void solve()
+{
+    ll n;
+    cin >> n;
+    for (ll i = 1; i <= n; i++)
+        for (ll j = 1; j <= n; j++)
+            cin >> a[i][j];
+    ll idx = 2;
+    string s = "";
+    s += '1';
+    while (idx <= n)
+    {
+        ll p = 0;
+        char x;
+        bool f = 0;
+        for (ll i = 1; i < idx; i++)
+        {
+            if (a[idx][i] == '1')
+            {
+                bool ff = 1;
+                for (ll j = i + 1; j < idx; j++)
+                {
+                    if (a[idx][j] == '0')
+                    {
+                        ff = 0;
+                        break;
+                    }
+                }
+                if (ff)
+                {
+                    x = i + '0';
+                    ll pp = s.find(x);
+                    p = max(pp, p);
+                    f = 1;
+                }
+            }
+        }
+        if (f) p++;
+        char xx = idx + '0';
+        s.insert(p, 1, xx);
+        idx++;
+    }
+    for (ll i = 0; i < s.size(); i++) cout << s[i] << " ";
+    cout << endl;
 }
 
-void solve() {
-	int n; cin >> n;
-	vector<string> ss(n);
-	vector<int> b(n);
-
-	for (int i = 1; i <= n; i++) {
-		b[i - 1] = i;
-	}
-	for (int i = 0; i < n; i++) {
-		cin >> ss[i];
-	}
-	for (int i = 0; i < n; i++) {
-		bool flag = true;
-		a[i].clear();
-		for (int j = 0; j < n; j++) {
-			if ((ss[j])[i] == '1') {
-				a[i].push_back(j + 1);
-				flag = false;
-			}
-		}
-		if (flag) {
-			a[i].push_back(0);
-		}
-	}
-	sort(b.begin(), b.end(), cmp);
-
-	for (int i = 0; i < b.size(); i++) {
-		cout << b[i] << " ";
-
-	}
-	cout << endl;
-}
-
-int main() {
-	int t;
-	cin >> t;
-	while (t--) {
-		vector<vector<int>> a(N);
-		solve();
-
-	}
-	return 0;
+signed main()
+{
+    ll t;
+    cin >> t;
+    while (t--) solve();
 }

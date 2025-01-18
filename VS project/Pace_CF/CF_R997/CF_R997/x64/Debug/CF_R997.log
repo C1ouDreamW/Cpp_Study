@@ -1,2 +1,5 @@
 ﻿  main.cpp
+C:\Users\C1\Desktop\C1ouD\Cpp_Study\VS project\Pace_CF\CF_R997\CF_R997\main.cpp(38,27): warning C4244: “=”: 从“ll”转换到“char”，可能丢失数据
+C:\Users\C1\Desktop\C1ouD\Cpp_Study\VS project\Pace_CF\CF_R997\CF_R997\main.cpp(46,17): warning C4244: “初始化”: 从“ll”转换到“char”，可能丢失数据
+C:\Users\C1\Desktop\C1ouD\Cpp_Study\VS project\Pace_CF\CF_R997\CF_R997\main.cpp(50,22): warning C4018: “<”: 有符号/无符号不匹配
   CF_R997.vcxproj -> C:\Users\C1\Desktop\C1ouD\Cpp_Study\VS project\Pace_CF\CF_R997\x64\Debug\CF_R997.exe
