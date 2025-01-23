@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\C1\\Desktop\\C1ouD\\Cpp_Study\\VS project\\Pace_Now\\NC_2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A5C7E93C-B8C3-471A-9697-B40E2D32D4F3}|NC_2\\NC_2.vcxproj|C:\\Users\\C1\\Desktop\\C1ouD\\Cpp_Study\\VS project\\Pace_Now\\NC_2\\NC_2\\temp.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A5C7E93C-B8C3-471A-9697-B40E2D32D4F3}|NC_2\\NC_2.vcxproj|solutionrelative:NC_2\\temp.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A5C7E93C-B8C3-471A-9697-B40E2D32D4F3}|NC_2\\NC_2.vcxproj|C:\\Users\\C1\\Desktop\\C1ouD\\Cpp_Study\\VS project\\Pace_Now\\NC_2\\NC_2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A5C7E93C-B8C3-471A-9697-B40E2D32D4F3}|NC_2\\NC_2.vcxproj|solutionrelative:NC_2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5C7E93C-B8C3-471A-9697-B40E2D32D4F3}|NC_2\\NC_2.vcxproj|C:\\Users\\C1\\Desktop\\C1ouD\\Cpp_Study\\VS project\\Pace_Now\\NC_2\\NC_2\\temp.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A5C7E93C-B8C3-471A-9697-B40E2D32D4F3}|NC_2\\NC_2.vcxproj|solutionrelative:NC_2\\temp.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +18,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "temp.md",
               "DocumentMoniker": "C:\\Users\\C1\\Desktop\\C1ouD\\Cpp_Study\\VS project\\Pace_Now\\NC_2\\NC_2\\temp.md",
               "RelativeDocumentMoniker": "NC_2\\temp.md",
               "ToolTip": "C:\\Users\\C1\\Desktop\\C1ouD\\Cpp_Study\\VS project\\Pace_Now\\NC_2\\NC_2\\temp.md",
               "RelativeToolTip": "NC_2\\temp.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2025-01-23T04:02:07.315Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\C1\\Desktop\\C1ouD\\Cpp_Study\\VS project\\Pace_Now\\NC_2\\NC_2\\main.cpp",
               "RelativeDocumentMoniker": "NC_2\\main.cpp",
