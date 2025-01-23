@@ -1,59 +1,58 @@
+//牛客算法竞赛第二场
 #include<bits/stdc++.h>
 using namespace std;
-const int N = 1010;
-
-
-bool cmp(int& A, int& B) {
-	for (int i = 0; i < a[A - 1].size(); i++) {
-		if (a[A - 1][0] == 0&&a[A-1].size() == 1) {
-			return A > B;
-		}
-		if (a[A - 1][i] == B) {
-			return A < B;
-		}
-	}
-	return A >= B;
-}
-
+#define int long long
 void solve() {
-	int n; cin >> n;
-	vector<string> ss(n);
-	vector<int> b(n);
+	int n, h, m;cin >> n >> h >> m;
+	set<int> ans1, ans2, ans3;
+	for (int i = 0; i < n; i++) {
+		int id;
+		string date, time;
+		cin >> id >> date >> time;
+		int year = stoi(date.substr(0, 4));
+		if (year != h) {
+			continue;
+		}
+		int month = stoi(date.substr(5, 2));
+		if (month != m) {
+			continue;
+		}
+		int day = stoi(date.substr(8, 2));
+		int hour = stoi(time.substr(0, 2));
+		int minute = stoi(time.substr(3, 2));
+		int second = stoi(time.substr(6, 2));
 
-	for (int i = 1; i <= n; i++) {
-		b[i - 1] = i;
-	}
-	for (int i = 0; i < n; i++) {
-		cin >> ss[i];
-	}
-	for (int i = 0; i < n; i++) {
-		bool flag = true;
-		for (int j = 0; j < n; j++) {
-			if ((ss[j])[i] == '1') {
-				a[i].push_back(j + 1);
-				flag = false;
+		if (hour == 10 || hour == 20) {
+			if (minute == 0 && second == 0) {
+				ans1.insert(id);
 			}
 		}
-		if (flag) {
-			a[i].push_back(0);
+		else if (hour == 13) {
+			if (minute == 0 && second == 0) {
+				ans2.insert(id);
+			}
+		}
+		else if (hour == 1) {
+			if (minute == 0 && second == 0) {
+				ans3.insert(id);
+			}
+		}
+
+		if ((hour >= 7 && hour < 10) || (hour >= 18 && hour < 20)) {
+			ans1.insert(id);
+		}
+		else if (hour >= 11 && hour < 13) {
+			ans2.insert(id);
+		}
+		else if (hour >= 22 || hour < 1) {
+			ans3.insert(id);
 		}
 	}
-	sort(b.begin(), b.end(), cmp);
-
-	for (int i = 0; i < b.size(); i++) {
-		cout << b[i] << " ";
-
-	}
-	cout << endl;
+	cout << ans1.size() << " " << ans2.size() << " " << ans3.size() << endl;
 }
 
-int main() {
-	int t;
-	cin >> t;
-	while (t--) {
-		global vector<vector<int>> a(N);
-		solve();
-
-	}
+signed main() {
+	solve();
 	return 0;
 }
+

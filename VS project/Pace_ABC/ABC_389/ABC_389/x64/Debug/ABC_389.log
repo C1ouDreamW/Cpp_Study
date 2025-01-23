@@ -1,0 +1,10 @@
+﻿  main.cpp
+C:\Users\C1\Desktop\C1ouD\Cpp_Study\VS project\Pace_CF\ABC_389\ABC_389\main.cpp(31,20): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“__int64”
+      C:\Users\C1\Desktop\C1ouD\Cpp_Study\VS project\Pace_CF\ABC_389\ABC_389\main.cpp(31,20):
+      请考虑在格式字符串中使用“%lld”
+      C:\Users\C1\Desktop\C1ouD\Cpp_Study\VS project\Pace_CF\ABC_389\ABC_389\main.cpp(31,20):
+      请考虑在格式字符串中使用“%Id”
+      C:\Users\C1\Desktop\C1ouD\Cpp_Study\VS project\Pace_CF\ABC_389\ABC_389\main.cpp(31,20):
+      请考虑在格式字符串中使用“%I64d”
+  
+  ABC_389.vcxproj -> C:\Users\C1\Desktop\C1ouD\Cpp_Study\VS project\Pace_CF\ABC_389\x64\Debug\ABC_389.exe

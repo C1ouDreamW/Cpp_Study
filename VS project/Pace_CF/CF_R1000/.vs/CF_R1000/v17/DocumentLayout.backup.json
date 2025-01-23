@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\C1\\Desktop\\C1ouD\\Cpp_Study\\VS project\\Pace_CF\\CF_R1000\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EECBBEAC-264C-44B4-A6E9-C68DC0ADA413}|CF_R1000\\CF_R1000.vcxproj|C:\\Users\\C1\\Desktop\\C1ouD\\Cpp_Study\\VS project\\Pace_CF\\CF_R1000\\CF_R1000\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EECBBEAC-264C-44B4-A6E9-C68DC0ADA413}|CF_R1000\\CF_R1000.vcxproj|solutionrelative:CF_R1000\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EECBBEAC-264C-44B4-A6E9-C68DC0ADA413}|CF_R1000\\CF_R1000.vcxproj|C:\\Users\\C1\\Desktop\\C1ouD\\Cpp_Study\\VS project\\Pace_CF\\CF_R1000\\CF_R1000\\temp.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{EECBBEAC-264C-44B4-A6E9-C68DC0ADA413}|CF_R1000\\CF_R1000.vcxproj|solutionrelative:CF_R1000\\temp.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "temp.md",
+              "DocumentMoniker": "C:\\Users\\C1\\Desktop\\C1ouD\\Cpp_Study\\VS project\\Pace_CF\\CF_R1000\\CF_R1000\\temp.md",
+              "RelativeDocumentMoniker": "CF_R1000\\temp.md",
+              "ToolTip": "C:\\Users\\C1\\Desktop\\C1ouD\\Cpp_Study\\VS project\\Pace_CF\\CF_R1000\\CF_R1000\\temp.md",
+              "RelativeToolTip": "CF_R1000\\temp.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-01-22T12:06:09.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\C1\\Desktop\\C1ouD\\Cpp_Study\\VS project\\Pace_CF\\CF_R1000\\CF_R1000\\main.cpp",
+              "RelativeDocumentMoniker": "CF_R1000\\main.cpp",
+              "ToolTip": "C:\\Users\\C1\\Desktop\\C1ouD\\Cpp_Study\\VS project\\Pace_CF\\CF_R1000\\CF_R1000\\main.cpp",
+              "RelativeToolTip": "CF_R1000\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-22T12:06:00.426Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
