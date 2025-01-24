@@ -1,58 +1,52 @@
-//牛客算法竞赛第二场
 #include<bits/stdc++.h>
 using namespace std;
-#define int long long
-void solve() {
-	int n, h, m;cin >> n >> h >> m;
-	set<int> ans1, ans2, ans3;
-	for (int i = 0; i < n; i++) {
-		int id;
-		string date, time;
-		cin >> id >> date >> time;
-		int year = stoi(date.substr(0, 4));
-		if (year != h) {
-			continue;
-		}
-		int month = stoi(date.substr(5, 2));
-		if (month != m) {
-			continue;
-		}
-		int day = stoi(date.substr(8, 2));
-		int hour = stoi(time.substr(0, 2));
-		int minute = stoi(time.substr(3, 2));
-		int second = stoi(time.substr(6, 2));
+const int N = 510;
+int n,m;
+int x2 = 0, y2 = 0;
+int dx[4] = { 1,-1,0,0 };
+int dy[4] = { 0,0,1,-1 };
 
-		if (hour == 10 || hour == 20) {
-			if (minute == 0 && second == 0) {
-				ans1.insert(id);
-			}
-		}
-		else if (hour == 13) {
-			if (minute == 0 && second == 0) {
-				ans2.insert(id);
-			}
-		}
-		else if (hour == 1) {
-			if (minute == 0 && second == 0) {
-				ans3.insert(id);
-			}
-		}
+char a[N][N];
+bool flag[N][N];
+bool isWin = false;
 
-		if ((hour >= 7 && hour < 10) || (hour >= 18 && hour < 20)) {
-			ans1.insert(id);
-		}
-		else if (hour >= 11 && hour < 13) {
-			ans2.insert(id);
-		}
-		else if (hour >= 22 || hour < 1) {
-			ans3.insert(id);
-		}
+bool dfs(int x, int y) {
+	if (x == x2 && y == y2) {
+		isWin = true;
+		return true;
 	}
-	cout << ans1.size() << " " << ans2.size() << " " << ans3.size() << endl;
+	if (isWin) return;
+	for (int i = 0; i < 4; i++) {
+		int xx = x + dx[i];
+		int yy = y + dy[i];
+		if (a[xx][yy] == '#') continue;
+		if (!flag[xx][yy]) {
+			flag[xx][yy] = true;
+			dfs(xx,yy);
+			flag[xx][yy] = false;
+		}
+		if (isWin) return;
+	}
 }
 
-signed main() {
-	solve();
+int main() {
+	while (cin >> n >> m) {
+		int x1 = 0, y1 = 0;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				cin >> a[i][j];
+				if (a[i][j] == 'S') {
+					x1 = i;
+					y1 = j;
+				}
+				else if (a[i][j] == 'E') {
+					x2 = i;
+					y2 = j;
+				}
+			}
+		}
+		if (isWin) cout << "Yes" << endl;
+		else cout << "No" << endl;
+	}
 	return 0;
 }
-

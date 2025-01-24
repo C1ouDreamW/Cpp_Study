@@ -1,4 +1,4 @@
-### NC16644
+### NC16644--[NOIP2007]字符串的展开
 	#include<bits/stdc++.h>
 	using namespace std;
 
@@ -104,7 +104,7 @@
 		return 0;
 	}
 
-### NC16622
+### NC16622--[NOIP2009]多项式输出
 	#include<bits/stdc++.h>
 	using namespace std;
 	int main() {
@@ -139,7 +139,7 @@
 		return 0;
 	}
 
-### NC16589
+### NC16589--[NOIP2010]机器翻译
 	#include<bits/stdc++.h>
 	using namespace std;
 	int main() {
@@ -172,7 +172,7 @@
 		return 0;
 	}
 
-### NC16593
+### NC16593--[NOIP2011]铺地毯
 	#include<bits/stdc++.h>
 	using namespace std;
 	struct node {
@@ -197,7 +197,7 @@
 		return 0;
 	}
 
-### NC16593
+### NC16593--回文日期
 		#include<bits/stdc++.h>
 		using namespace std;
 
@@ -301,7 +301,33 @@
 			return 0;
 		}
 
-### NC16649
+### NC16649--校门外的树 NC24636--值周
+#### (1)差分做法
+	#include<bits/stdc++.h>
+	using namespace std;
+
+
+	void solve() {
+		int l, m; cin >> l >> m;
+		vector<int> v(l + 1);
+		for (int i = 0; i < m; i++) {
+			int a, b; cin >> a >> b;
+			v[a]++;
+			v[b + 1]--;
+		}
+		int sum = 0, cnt = 0;
+		for (int i = 0; i < (int)v.size(); i++) {
+			sum += v[i];
+			if (sum == 0) cnt++;
+		}
+		cout << cnt << endl;
+	}
+
+	int main() {
+		solve();
+		return 0;
+	}
+#### (2)区间合并做法
 	#include<bits/stdc++.h>
 	using namespace std;
 
@@ -343,6 +369,87 @@
 		}
 		sum += end - start + 1;
 		cout << l - sum +1 << endl;
+	}
+
+	int main() {
+		solve();
+		return 0;
+	}
+
+### NC19913--[CQOI2009]中位数图
+	#include<bits/stdc++.h>
+	using namespace std;
+
+
+	void solve() {
+		int n, b; cin >> n >> b;
+		vector<int> v(n),temp(2*n);
+		int idx = 0;
+		for (int i = 0; i < n; i++) {
+			int x; cin >> x;
+			if (x < b) v[i] = -1;
+			else if (x > b) v[i] = 1;
+			else v[i] = x,idx = i;
+		}
+		//向左搜寻
+		int sum = 0;
+		int cnt = 1;
+		for (int i = idx - 1; i >= 0; i--) {
+			sum += v[i];
+			temp[n + sum]++;
+			if (!sum)cnt++;
+		}
+		//向右搜索
+		sum = 0;
+		for (int i = idx + 1; i <(int)v.size(); i++) {
+			sum += v[i];
+			cnt += temp[n - sum];
+			if (!sum)cnt++;
+		}
+		cout << cnt << endl;
+	}
+
+	int main() {
+		solve();
+		return 0;
+	}
+
+### NC20032--激光炸弹
+	#include<bits/stdc++.h>
+	using namespace std;
+
+	const int N = 5010;
+	int a[N][N];
+
+	void solve() {
+		int n, r; cin >> n >> r;
+		int max_x = 0, max_y = 0;
+		for (int i = 0; i < n; i++) {
+			int x, y; cin >> x >> y;
+			cin >> a[x][y];
+			max_x = max(max_x, x);
+			max_y = max(max_y, y);
+		}
+		for (int i = 0; i <= max_x; ++i) {
+			for (int j = 0; j <= max_y; ++j) {
+				if (i > 0)a[i][j] += a[i - 1][j];
+				if (j > 0)a[i][j] += a[i][j - 1];
+				if (i > 0 && j > 0)a[i][j] -= a[i - 1][j - 1];
+			}
+		}
+		//求出r*r的矩形的和的最大值
+		int ans = 0;
+		for (int i = 0; i <= max_x; i++) {
+			for (int j = 0; j <= max_y; j++) {
+				int value = a[i][j];
+				if (i >= r)value -= a[i - r][j];
+				if (j >= r)value -= a[i][j - r];
+				if (i >= r && j >= r)value += a[i - r][j - r];
+				if (value > ans)ans = value;
+			}
+		}
+		cout << ans << endl;
+
 	}
 
 	int main() {
