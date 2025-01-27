@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\C1\Desktop\C1ouD\Cpp_Study\VS project\Pace_Now\NC_3\NC_3\main.cpp(13,10): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+C:\Users\C1\Desktop\C1ouD\Cpp_Study\VS project\Pace_Now\NC_3\NC_3\main.cpp(15,14): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+  NC_3.vcxproj -> C:\Users\C1\Desktop\C1ouD\Cpp_Study\VS project\Pace_Now\NC_3\x64\Debug\NC_3.exe
