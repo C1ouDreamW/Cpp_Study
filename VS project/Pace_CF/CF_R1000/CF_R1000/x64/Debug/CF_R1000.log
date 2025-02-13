@@ -1,3 +1,0 @@
-﻿  main.cpp
-C:\Users\C1\Desktop\C1ouD\Cpp_Study\VS project\Pace_CF\CF_R1000\CF_R1000\main.cpp(5,11): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-  CF_R1000.vcxproj -> C:\Users\C1\Desktop\C1ouD\Cpp_Study\VS project\Pace_CF\CF_R1000\x64\Debug\CF_R1000.exe
