@@ -11,26 +11,31 @@ int n;
 vector<vector<int>> ans;
 vector<int> temp;
 
-void dfs(int num) {
-  if (num == 1 ) {
+void dfs(int num, int www) {
+  if (num == 0) {
+    sort(temp.begin(), temp.end());
     ans.push_back(temp);
     return;
   }
 
-  for (int i = 1; i < num; i++) {
+  for (int i = www; i <= num; i++) {
     temp.push_back(i);
-    dfs(num - i);
+    dfs(num - i, i);
     temp.pop_back();
   }
 }
 
 void solve() {
   cin >> n;
-  dfs(n);
-
+  dfs(n, 1);
+  ans.pop_back();
   for (int i = 0; i < ans.size(); i++) {
     for (int j = 0; j < ans[i].size(); j++) {
-      cout << ans[i][j] << " ";
+      if (j != ans[i].size() - 1) {
+        cout << ans[i][j] << '+';
+      } else {
+        cout << ans[i][j];
+      }
     }
     cout << endl;
   }
